@@ -1,24 +1,26 @@
 <template>
-    <div>
+    <div class="min-h-screen flex flex-col">
         <div class="bg-slate-800">
             <Comheader/>
         </div>
-        <div class="mb-5">
-            <ComFilterSection/>
-        </div>
-          
-        <div class="max-width">
-           <ComImageSlideSection />
-
-            <div class="mt-4 mb-4">
-                <ComCardInfoSection />
-            </div>
-
-            <div>
-                <ComHotPromotion />
+        <main class="flex-1">
+            <div class="mb-5">
+                <ComFilterSection/>
             </div>
             
-        </div>
+            <div class="max-width">
+            <ComImageSlideSection />
+
+                <div class="mt-4 mb-4">
+                    <ComCardInfoSection />
+                </div>
+
+                <div>
+                    <ComHotPromotion />
+                </div>
+                
+            </div>
+        </main>
         <div class="bg-slate-800">
             <Comfooter/>
         </div>

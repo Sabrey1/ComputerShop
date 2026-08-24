@@ -113,6 +113,7 @@
     <main
       class="content"
       :class="{
+        'content-public': !showSidebar,
         'content-sidebar-open':
           showSidebar &&
           !isMobile &&
@@ -141,7 +142,10 @@
         </div>
       </header>
 
-      <section class="page-content">
+      <section
+        class="page-content"
+        :class="{ 'page-content-public': !showSidebar }"
+      >
         <router-view />
       </section>
     </main>
@@ -295,8 +299,7 @@ onUnmounted(() => {
 <style scoped>
 .app-layout {
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   background: #ffffff;
 }
 .sidebar {
@@ -408,12 +411,16 @@ onUnmounted(() => {
 
 .content {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin-left: 0;
-  overflow: hidden;
   transition:
     margin-left 0.3s ease,
     width 0.3s ease;
+}
+
+.content:not(.content-public) {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .content-sidebar-open {
@@ -479,6 +486,12 @@ onUnmounted(() => {
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box; 
+}
+
+.page-content-public {
+  min-height: 100vh;
+  height: auto;
+  overflow: visible;
 }
 
 .sidebar-backdrop {
