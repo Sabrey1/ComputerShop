@@ -35,6 +35,18 @@
         </RouterLink>
 
         <RouterLink
+          to="/admin/bussiness-info"
+          class="menu-item"
+          @click="onLinkClick"
+        >
+          <i class="pi pi-box"></i>
+
+          <span class="khmer-text">
+            Bussiness Info
+          </span>
+        </RouterLink>
+
+        <RouterLink
           to="/admin/category"
           class="menu-item"
           @click="onLinkClick"
@@ -89,6 +101,18 @@
 
           <span class="khmer-text">
             Supplier
+          </span>
+        </RouterLink>
+        
+        <RouterLink
+          to="/admin/image-slide"
+          class="menu-item"
+          @click="onLinkClick"
+        >
+          <i class="pi pi-box"></i>
+
+          <span class="khmer-text">
+            Image Slide
           </span>
         </RouterLink>
 

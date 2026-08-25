@@ -43,6 +43,16 @@ const routes = [
     name: 'Supplier',
     component: () => import('../views/Supplier/supplier.vue')
   },
+  {
+    path: '/admin/bussiness-info',
+    name: 'BussinessInfo',
+    component: () => import('../views/BussinessInfo/bussinessInfo.vue')
+  },
+  {
+    path: '/admin/image-slide',
+    name: 'ImageSlide',
+    component: () => import('../views/ImageSlide/imageSlide.vue')
+  },
   
 ]
 
