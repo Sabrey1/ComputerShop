@@ -30,11 +30,13 @@ import Headphones from '@primeicons/vue/headphones';
 <style scoped>
 .card{
     flex:1;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 0.5px solid #ddd;
+    border-radius: 6px;
 }
 .card svg {
     width: 60px !important;

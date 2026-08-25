@@ -11,11 +11,11 @@
             <div class="max-width">
             <ComImageSlideSection />
 
-                <div class="mt-4 mb-4">
+                <div class="mt-8 mb-4" style="margin-top: 50px; margin-bottom: 50px">
                     <ComCardInfoSection />
                 </div>
 
-                <div>
+                <div class="mb-5">
                     <ComHotPromotion />
                 </div>
                 
@@ -34,6 +34,5 @@
     import ComFilterSection from "../CustomerScreen/components/ComFilterSection.vue"
     import ComCardInfoSection from "../CustomerScreen/components/ComCardInfoSection.vue"
     import ComImageSlideSection from "../CustomerScreen/components/ComImageSlideSection.vue"
-
     import ComHotPromotion from "../CustomerScreen/components/ComHotPromotion.vue"
 </script>
