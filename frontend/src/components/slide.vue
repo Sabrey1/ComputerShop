@@ -13,14 +13,16 @@
     :modules="modules"
     class="mySwiper"
   >
-    <swiper-slide>
-        <img src="../assets/image/Computer/asus1.png" />
-    </swiper-slide>
-    <swiper-slide>
-        <img src="../assets/image/Computer/asus2.png"/>
-    </swiper-slide>
-    <swiper-slide>
-        <img src="../assets/image/Computer/asus3.png"/>
+    <swiper-slide
+      v-for="item in [...imageSlide]
+      .filter(item=>item.enable)
+      .sort((a,b ) => a.sort_order - b.sort_order)"
+      :key="item.id"
+    >
+      <img
+        :src="item.image"
+        :alt="item.title"
+      />
     </swiper-slide>
   </swiper>
 </template>
@@ -36,6 +38,11 @@
 
   import '../style.css';
 
+  import { ref, onMounted } from 'vue'
+
+import { useImageSlide } from "../composable/useImageSlide.js"
+
+
   // import required modules
   import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -45,8 +52,13 @@
       SwiperSlide,
     },
     setup() {
+      const { getImageSlide,
+        imageSlide } = useImageSlide()
+      onMounted(() => {
+        getImageSlide()
+      });
       return {
-        modules: [Autoplay, Pagination, Navigation],
+        modules: [Autoplay, Pagination, Navigation],imageSlide,
       };
     },
   };

@@ -1,5 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy import text
 from sqlalchemy.orm import Session
+from app.database import engine
 
 from app.database import get_db
 from app.models.product import Product

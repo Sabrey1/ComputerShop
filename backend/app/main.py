@@ -10,6 +10,8 @@ from app.routers.customer import router as customer_router
 from app.routers.business_info import router as business_info_router
 from app.routers.image_slide import router as image_slide_router
 
+from app.api.product_category import router as product_category_router
+
 app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
@@ -33,6 +35,8 @@ app.include_router(product_router)
 app.include_router(supplier_router)
 app.include_router(customer_router)
 app.include_router(image_slide_router)
+
+app.include_router(product_category_router)
 
 
 @app.get("/")
