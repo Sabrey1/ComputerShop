@@ -6,8 +6,7 @@ DATABASE_URL = "mysql+pymysql://Sabrey:123456@localhost:3306/eposcomputer"
 
 
 engine = create_engine(
-    DATABASE_URL,
-    connect_args={"check_same_thread": False}
+    DATABASE_URL
 )
 
 SessionLocal = sessionmaker(

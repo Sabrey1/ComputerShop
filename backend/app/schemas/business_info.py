@@ -3,7 +3,7 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict
 
 
-class ImageSlideCreate(BaseModel):
+class BussinessInfoCreate(BaseModel):
     bussiness_name: str
     logo: str | None = None
     phone_number_1: str | None = None
@@ -12,7 +12,7 @@ class ImageSlideCreate(BaseModel):
     status: bool = True
 
 
-class ImageSlideUpdate(BaseModel):
+class BussinessInfoUpdate(BaseModel):
     bussiness_name: str | None = None
     logo: str | None = None
     phone_number_1: str | None = None
@@ -21,7 +21,7 @@ class ImageSlideUpdate(BaseModel):
     status: bool | None = None
 
 
-class ImageSlideResponse(BaseModel):
+class BussinessInfoResponse(BaseModel):
     id: int
     bussiness_name: str
     logo: str

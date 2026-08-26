@@ -1,5 +1,8 @@
 <template>
     <div class="w-full">
+        <div class="p-4" style="justify-content: end; display: flex">
+            <Button label="New Category" class="" />
+        </div>
         <DataTable :value="categories" tableStyle="min-width: 50rem">
             <Column field="name" header="Name" />
             <Column field="description" header="Description" />

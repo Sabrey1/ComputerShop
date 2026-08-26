@@ -58,7 +58,7 @@
           </span>
         </RouterLink>
 
-        <RouterLink
+        <!-- <RouterLink
           to="/admin/brand"
           class="menu-item"
           @click="onLinkClick"
@@ -68,7 +68,7 @@
           <span class="khmer-text">
             Brand
           </span>
-        </RouterLink>
+        </RouterLink> -->
 
         <RouterLink
           to="/admin/product"

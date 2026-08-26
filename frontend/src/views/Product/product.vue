@@ -1,5 +1,9 @@
 <template>
     <div class="w-full">
+        <div class="p-4" style="justify-content: end; display: flex">
+            <Button label="New Product"/>
+        </div>
+
         <DataTable :value="products" tableStyle="min-width: 50rem"> 
             <Column field="name" header="Name" />
             <Column field="category" header="Category">
@@ -7,12 +11,7 @@
                     {{ slotProps.data.category?.name || '-' }}
                 </template>
             </Column>
-            <Column field="category" header="Brand">
-                <template #body="slotProps">
-                    {{ slotProps.data.brand?.name || '-' }}
-                </template>
-            </Column>
-            <Column field="cost_price" header="Cost Price"></Column>
+          
             <Column field="selling_price" header="Sale Price"></Column>
             <Column field="stock_quantity" header="Quantity"></Column>
             <Column header="Action">

@@ -7,6 +7,8 @@ from app.routers.brand import router as brand_router
 from app.routers.product import router as product_router
 from app.routers.supplier import router as supplier_router
 from app.routers.customer import router as customer_router
+from app.routers.business_info import router as business_info_router
+from app.routers.image_slide import router as image_slide_router
 
 app = FastAPI()
 
@@ -24,11 +26,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(business_info_router)
 app.include_router(category_router)
 app.include_router(brand_router)
 app.include_router(product_router)
 app.include_router(supplier_router)
 app.include_router(customer_router)
+app.include_router(image_slide_router)
 
 
 @app.get("/")

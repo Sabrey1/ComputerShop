@@ -1,5 +1,8 @@
 <template>
     <div class="w-full">
+        <div class="p-4" style="justify-content: end; display: flex">
+            <Button label="New Supplier" class="" />
+        </div>
         <DataTable :value="suppliers" tableStyle="min-width: 50rem">
             <Column field="name" header="Name" />
             <Column field="contact_person" header="Contact Person" />
